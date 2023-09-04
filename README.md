@@ -2,6 +2,8 @@
 
 I gave GPT-4 eyes. "眼观六路，耳听八方"
 
+<video src="https://github.com/Charmve/gpt-eyes/raw/main/src/ssstwitter.com_1693805997510.mp4" controls="controls" style="max-width: 730px;"></video>
+
 Here’s what I did:
 - added some data to a vision model
 - gave the AI camera access
@@ -16,6 +18,8 @@ Watch it get 3 questions 100% correct!
 - YouTube https://www.youtube.com/watch?v=w-wxguIs-0I
 
 ## This Package Is Sponsorware 💰💰💰
+
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Charmve)
 
 This repo was only available to my sponsors on GitHub Sponsors until I reached 15 sponsors.
 

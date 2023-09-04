@@ -4,8 +4,7 @@ const { Configuration, OpenAIApi } = require("openai");
 export const askGpt = async (topic) => {
   try {
     const configuration = new Configuration({
-        // apiKey: "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",
-        apiKey: "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",
+        apiKey: "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",
       });
       const openai = new OpenAIApi(configuration);
       

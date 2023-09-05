@@ -19,7 +19,7 @@ Watch it get 3 questions 100% correct!
 
 ## This Package Is Sponsorware 💰💰💰
 
-[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Charmve)
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Charmve?frequency=one-time&sponsor=Charmve) https://github.com/sponsors/Charmve?frequency=one-time&sponsor=Charmve
 
 This repo was only available to my sponsors on GitHub Sponsors until I reached 15 sponsors.
 

@@ -1,0 +1,10 @@
+{
+    "summary": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
+    "details": [
+        {
+            "comment": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/reportWebVitals.js\":0-12",
+            "content": "const reportWebVitals = onPerfEntry => {\n  if (onPerfEntry && onPerfEntry instanceof Function) {\n    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n      getCLS(onPerfEntry);\n      getFID(onPerfEntry);\n      getFCP(onPerfEntry);\n      getLCP(onPerfEntry);\n      getTTFB(onPerfEntry);\n    });\n  }\n};\nexport default reportWebVitals;"
+        }
+    ]
+}

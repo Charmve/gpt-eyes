@@ -1,0 +1,268 @@
+{
+    "0": {
+        "file_id": 0,
+        "content": "/README.md",
+        "type": "filepath"
+    },
+    "1": {
+        "file_id": 0,
+        "content": "\"GPT Eyes\" project uses vision and AI to identify objects, search web for info, and answer questions. It utilizes React frontend, TensorFlow Models - MobileNet API, and GPT API with instructions on installing dependencies, configuring keys, starting server, and using the app.",
+        "type": "summary"
+    },
+    "2": {
+        "file_id": 0,
+        "content": "# GPT Eyes\nI gave GPT-4 eyes. \"眼观六路，耳听八方\"\n<video src=\"https://github.com/Charmve/gpt-eyes/raw/main/src/ssstwitter.com_1693805997510.mp4\" controls=\"controls\" style=\"max-width: 730px;\"></video>\nHere’s what I did:\n- added some data to a vision model\n- gave the AI camera access\n- asked it questions about the scene\n- it identified objects\n- it searched web for info\n- used that info to accurately answer\nWatch it get 3 questions 100% correct!\n- Twitter https://twitter.com/mckaywrigley/status/1651291367224807424?s=20\n- YouTube https://www.youtube.com/watch?v=w-wxguIs-0I\n## This Package Is Sponsorware 💰💰💰\n[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Charmve?frequency=one-time&sponsor=Charmve) https://github.com/sponsors/Charmve?frequency=one-time&sponsor=Charmve\nThis repo was only available to my sponsors on GitHub Sponsors until I reached 15 sponsors.\nLearn more about **Sponsorware** at [github.com/sponsorware/docs](https://github.com/sponsorware/docs) 💰.",
+        "type": "code",
+        "location": "/README.md:1-26"
+    },
+    "3": {
+        "file_id": 0,
+        "content": "This code describes a project called \"GPT Eyes\" that uses a vision model and AI to identify objects in a scene, search the web for information, and accurately answer questions. The author asks for sponsorship to support further development of the project.",
+        "type": "comment"
+    },
+    "4": {
+        "file_id": 0,
+        "content": "## Technologies Used\n- Frontend: React\n- Image Analysis API: TensorFlow Models - MobileNet\n- Text Generation API: GPT API\n## Installation\n1. Clone the repository: `git clone https://github.com/Charmve/gpt-eyes.git`\n2. Navigate to the project directory: `cd gpt-eyes`\n3. Install dependencies: `npm install`\n## Configuration\n1. Create an account and obtain API keys for TensorFlow Models - MobileNet and GPT API.\n2. Update the configuration file with your API keys:\n   - TensorFlow Models - MobileNet: `/path/to/config.js`\n   - GPT API: `/path/to/config.js`\n## Usage\n1. Start the development server: `npm start`\n2. Open your browser and visit: `http://localhost:3000`\n## How it Works\n1. Device camera analyses an image.\n2. The application uses TensorFlow Models - MobileNet API to analyze the image and extract object information.\n3. The application sends the analyzed object information to the GPT API.\n4. The GPT API generates text describing the analyzed object.\n5. The application displays the analyzed image and the generated text.",
+        "type": "code",
+        "location": "/README.md:28-58"
+    },
+    "5": {
+        "file_id": 0,
+        "content": "\"This code describes a project that utilizes React for the frontend, TensorFlow Models - MobileNet for image analysis API, and GPT API for text generation. It provides instructions on how to install dependencies, configure API keys, start the development server, and use the application.\"",
+        "type": "comment"
+    },
+    "6": {
+        "file_id": 1,
+        "content": "/package.json",
+        "type": "filepath"
+    },
+    "7": {
+        "file_id": 1,
+        "content": "This code is a package.json file for a React application, defining the project's dependencies and configuration. It uses popular libraries like TensorFlow, OpenAI, Axios, and Jest for testing. The app targets modern browsers and has scripts for start, build, test, and eject operations.",
+        "type": "summary"
+    },
+    "8": {
+        "file_id": 1,
+        "content": "{\n  \"name\": \"eyes-gpt\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n    \"@tensorflow-models/coco-ssd\": \"^2.2.2\",\n    \"@tensorflow-models/mobilenet\": \"^2.1.0\",\n    \"@tensorflow/tfjs\": \"^4.5.0\",\n    \"@testing-library/jest-dom\": \"^5.16.5\",\n    \"@testing-library/react\": \"^13.4.0\",\n    \"@testing-library/user-event\": \"^13.5.0\",\n    \"axios\": \"^1.4.0\",\n    \"openai\": \"^3.2.1\",\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-scripts\": \"5.0.1\",\n    \"web-vitals\": \"^2.1.4\"\n  },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\",\n      \"react-app/jest\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}",
+        "type": "code",
+        "location": "/package.json:1-43"
+    },
+    "9": {
+        "file_id": 1,
+        "content": "This code is a package.json file for a React application, defining the project's dependencies and configuration. It uses popular libraries like TensorFlow, OpenAI, Axios, and Jest for testing. The app targets modern browsers and has scripts for start, build, test, and eject operations.",
+        "type": "comment"
+    },
+    "10": {
+        "file_id": 2,
+        "content": "/src/App.css",
+        "type": "filepath"
+    },
+    "11": {
+        "file_id": 2,
+        "content": "The code defines UI styles for elements like loading spinners, buttons, and containers. It uses flexbox and animations for effects. Button styles include hover and focus effects. Element widths and heights are set to automatic values for content-based adjustments.",
+        "type": "summary"
+    },
+    "12": {
+        "file_id": 2,
+        "content": ".loading-spinner {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100px;\n}\n.spinner {\n  border: 4px solid #f3f3f3;\n  border-top: 4px solid #3498db;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  animation: spin 1s linear infinite;\n}\n@keyframes spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.optionsBtn {\n  display: inline-block;\n  width: 35%;\n  background: #000;\n  border-radius: 150px;\n  padding: 10px;\n  margin-right: 10px;\n  color: #fff;\n  border: none;\n  cursor: pointer;\n}\n.optionsBtn:hover {\n  background: #333;\n}\n.optionsBtn:focus {\n  outline: none;\n}\n.capture-img, .capture-video {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n}\n#capture-img, #capture-video {\n  max-width: 100%;\n  max-height: 100%;",
+        "type": "code",
+        "location": "/src/App.css:1-58"
+    },
+    "13": {
+        "file_id": 2,
+        "content": "This code defines styles for various elements in the UI, including a loading spinner, buttons, and image/video capture containers. It uses flexbox to align content and applies animations to create a rotating spinner effect. The button styles include hover and focus effects.",
+        "type": "comment"
+    },
+    "14": {
+        "file_id": 2,
+        "content": "  width: auto;\n  height: auto;\n}",
+        "type": "code",
+        "location": "/src/App.css:59-61"
+    },
+    "15": {
+        "file_id": 2,
+        "content": "Sets the width and height of elements to automatic values, allowing them to adjust according to their content.",
+        "type": "comment"
+    },
+    "16": {
+        "file_id": 3,
+        "content": "/src/App.js",
+        "type": "filepath"
+    },
+    "17": {
+        "file_id": 3,
+        "content": "The code imports modules, handles events, and enables video capturing or prediction. It renders an image or video based on 'capturedImage' with options to retake or analyze. The analysis results are displayed in buttons for further interaction with GPT.",
+        "type": "summary"
+    },
+    "18": {
+        "file_id": 3,
+        "content": "import React, { useEffect, useRef, useState } from 'react';\nimport { runObjectDetection } from './controller/ImageAnalyser';\nimport './App.css';\nimport { askGpt } from './controller/gpt';\nfunction makeElementFullscreen(element, elementType) {\n  function resizeElement() {\n      const windowWidth = window.innerWidth;\n      const windowHeight = window.innerHeight;\n      let elementAspectRatio;\n      if (elementType === 'image') {\n          elementAspectRatio = element.naturalWidth / element.naturalHeight;\n      } else if (elementType === 'video') {\n          elementAspectRatio = element.videoWidth / element.videoHeight;\n      }\n      const windowAspectRatio = windowWidth / windowHeight;\n      if (windowAspectRatio > elementAspectRatio) {\n          element.style.width = '100%';\n          element.style.height = 'auto';\n      } else {\n          element.style.width = 'auto';\n          element.style.height = '100%';\n      }\n  }\n  window.addEventListener('resize', resizeElement);\n  if (elementType === 'video') {\n      element.addEventListener('loadedmetadata', resizeElement);",
+        "type": "code",
+        "location": "/src/App.js:1-32"
+    },
+    "19": {
+        "file_id": 3,
+        "content": "This code imports necessary modules and defines a function makeElementFullscreen which resizes an element based on the window size. It listens to 'resize' event and 'loadedmetadata' for video elements.",
+        "type": "comment"
+    },
+    "20": {
+        "file_id": 3,
+        "content": "  }\n  resizeElement();\n}\nconst App = () => {\n  const [isAnalysing, setAnalysing] = useState(false);\n  const videoRef = useRef(null);\n  const [isRecording, setIsRecording] = useState(true);\n  const [capturedImage, setCapturedImage] = useState(null);\n  const [predictions, setPredictions] = useState([]);\n  // const imageElement = document.getElementById('capture-img');\n  // makeElementFullscreen(imageElement, 'image');\n  // const videoElement = document.getElementById('capture-video');\n  // makeElementFullscreen(videoElement, 'video');\n  useEffect(() => {\n    const initWebcam = async () => {\n      try {\n        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });\n        if (videoRef.current) {\n          videoRef.current.srcObject = isRecording ? stream : null;\n        }\n      } catch (error) {\n        console.error('Error accessing webcam:', error);\n      }\n    };\n    initWebcam();\n  }, [isRecording]);\n  useEffect(() => {\n    const getPredictions = async () => {\n      const incomingPredictions = await runObjectDetection(capturedImage);",
+        "type": "code",
+        "location": "/src/App.js:33-67"
+    },
+    "21": {
+        "file_id": 3,
+        "content": "This code is initializing a video stream, enabling the user to record or analyze video input, and obtaining object detection predictions from an image.",
+        "type": "comment"
+    },
+    "22": {
+        "file_id": 3,
+        "content": "      console.log(\"Predictions: \", incomingPredictions);\n      setPredictions(incomingPredictions);\n      setAnalysing(false);\n    };\n    if (capturedImage) {\n      getPredictions();\n    }\n  }, [capturedImage]);\n  const takePicture = () => {\n    setAnalysing(true);\n    const canvas = document.createElement('canvas');\n    canvas.width = videoRef.current.videoWidth;\n    canvas.height = videoRef.current.videoHeight;\n    const context = canvas.getContext('2d');\n    context.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);\n    const image = canvas.toDataURL('image/jpeg');\n    setCapturedImage(image);\n    setIsRecording(false);\n  };\n  const retakePicture = () => {\n    setCapturedImage(null);\n    setIsRecording(true);\n  };\n  return (\n    <div style={{ height: '100%', overflow: 'hidden' }}>\n      <div style={{ flex: '1', backgroundColor: 'black' }}>\n        <div style={{ width: '100%', position: 'relative' }}>\n          <div style={{ flex: '1', backgroundColor: 'black', position: 'relative' }}>\n            {capturedImage ? (",
+        "type": "code",
+        "location": "/src/App.js:68-100"
+    },
+    "23": {
+        "file_id": 3,
+        "content": "This code appears to be part of a video capturing and prediction application. When a new image is captured, it calls the `getPredictions()` function to analyze the image and update the `incomingPredictions` state variable. The `setAnalysing(false)` line suggests that there may be some ongoing analysis process.\n\nIf an image has been captured (`capturedImage`), it triggers the prediction logic by calling `getPredictions()`.\nThe `takePicture()` function starts the image capturing process, creating a canvas to draw the video frame and converting it into a JPEG format. It then sets the `capturedImage` state variable and stops recording with `setIsRecording(false)`.\nThe `retakePicture()` function clears the captured image by setting `capturedImage` to null and resets the recording state with `setIsRecording(true)`.\nThe return statement suggests that there is a div element containing a video feed, and if an image has been captured (`capturedImage`), it displays that image.",
+        "type": "comment"
+    },
+    "24": {
+        "file_id": 3,
+        "content": "              <img src={capturedImage} id=\"capture-img\" alt=\"Captured\" style={{ width: '100%', height: '100%' }} />\n            ) : (\n              <video ref={videoRef} id=\"capture-video\" autoPlay playsInline style={{ width: '100%', height: '100%' }}></video>\n            )}\n            <div style={{ position: 'fixed', bottom: '20px', right: '20px' }}>\n              { isAnalysing ? (\n                <div className=\"loading-spinner\">\n                  <div className=\"spinner\"></div>\n                </div>\n              ) : (capturedImage ? (\n                <button onClick={retakePicture} style={{ borderRadius: '360px', backgroundColor: 'red', color: 'white', width: '75px', height: '75px', padding: '0', display: 'flex', justifyContent: 'center', alignItems: 'center', border: '1px solid black' }}>\n                  Restart\n                </button>\n              ) : (\n                <button onClick={takePicture} style={{ borderRadius: '360px', backgroundColor: 'green', color: 'white', width: '75px', ",
+        "type": "code",
+        "location": "/src/App.js:101-115"
+    },
+    "25": {
+        "file_id": 3,
+        "content": "This code is rendering either an image or a video, depending on whether 'capturedImage' exists or not. If the image exists, it displays the image and shows a button to retake the picture if 'isAnalysing' is false. If the image does not exist but 'isAnalysing' is true, it displays a loading spinner. The button to take a new picture is displayed when there is no captured image or analysis in progress.",
+        "type": "comment"
+    },
+    "26": {
+        "file_id": 3,
+        "content": "height: '75px', padding: '0', display: 'flex', justifyContent: 'center', alignItems: 'center', border: '1px solid black' }}>\n                  Analyse\n                </button>\n              ))}\n            </div>\n          </div>\n        </div>\n      </div>\n      <div style={{ flex: '1', padding: '20px', backgroundColor: '#fff', overflowY: 'auto' }}>\n        <div style={{ overflowX: 'scroll', whiteSpace: 'nowrap', height: '100%' }}>\n          <p>Analyse result:</p>\n          {predictions.map((message, index) => (\n            <button className='optionsBtn' type=\"button\" key={index} onClick={() => askGpt(message.className)}>\n              {message.className}\n            </button>\n          ))}\n        </div>\n      </div>\n    </div>\n  );\n};\nexport default App;",
+        "type": "code",
+        "location": "/src/App.js:115-142"
+    },
+    "27": {
+        "file_id": 3,
+        "content": "This code renders a button labeled \"Analyse\" and displays the results of an analysis in buttons that can be clicked to ask GPT for more information.",
+        "type": "comment"
+    },
+    "28": {
+        "file_id": 4,
+        "content": "/src/index.css",
+        "type": "filepath"
+    },
+    "29": {
+        "file_id": 4,
+        "content": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
+        "type": "summary"
+    },
+    "30": {
+        "file_id": 4,
+        "content": "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}",
+        "type": "code",
+        "location": "/src/index.css:1-13"
+    },
+    "31": {
+        "file_id": 4,
+        "content": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
+        "type": "comment"
+    },
+    "32": {
+        "file_id": 5,
+        "content": "/src/index.js",
+        "type": "filepath"
+    },
+    "33": {
+        "file_id": 5,
+        "content": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
+        "type": "summary"
+    },
+    "34": {
+        "file_id": 5,
+        "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\nimport reportWebVitals from './reportWebVitals';\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\nreportWebVitals();",
+        "type": "code",
+        "location": "/src/index.js:1-14"
+    },
+    "35": {
+        "file_id": 5,
+        "content": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
+        "type": "comment"
+    },
+    "36": {
+        "file_id": 6,
+        "content": "/src/reportWebVitals.js",
+        "type": "filepath"
+    },
+    "37": {
+        "file_id": 6,
+        "content": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
+        "type": "summary"
+    },
+    "38": {
+        "file_id": 6,
+        "content": "const reportWebVitals = onPerfEntry => {\n  if (onPerfEntry && onPerfEntry instanceof Function) {\n    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n      getCLS(onPerfEntry);\n      getFID(onPerfEntry);\n      getFCP(onPerfEntry);\n      getLCP(onPerfEntry);\n      getTTFB(onPerfEntry);\n    });\n  }\n};\nexport default reportWebVitals;",
+        "type": "code",
+        "location": "/src/reportWebVitals.js:1-13"
+    },
+    "39": {
+        "file_id": 6,
+        "content": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
+        "type": "comment"
+    },
+    "40": {
+        "file_id": 7,
+        "content": "/src/controller/ImageAnalyser.js",
+        "type": "filepath"
+    },
+    "41": {
+        "file_id": 7,
+        "content": "This code utilizes TensorFlow and MobileNet to classify image content by analyzing it, logs classification results, and optionally draws the top prediction. A function is also provided for object detection on captured images using MobileNet model and logging predictions.",
+        "type": "summary"
+    },
+    "42": {
+        "file_id": 7,
+        "content": "import * as tf from '@tensorflow/tfjs';\nimport * as mobilenet from '@tensorflow-models/mobilenet';\nconst analyzeImage = async (image, model) => {\n  const img = new Image();\n  img.src = image;\n  await img.decode(); // Ensure the image is fully loaded\n  console.log(\"start classify...\");\n  const predictions = await model.classify(img);\n  predictions.forEach(prediction => {\n    console.log(`Class: ${prediction.className}, Probability: ${prediction.probability}`);\n    // Optionally, you can also draw the top prediction on the image.\n    const topPrediction = prediction;\n    const canvas = document.createElement('canvas');\n    const context = canvas.getContext('2d');\n    canvas.width = img.width;\n    canvas.height = img.height;\n    context.drawImage(img, 0, 0);\n    context.font = '18px Arial';\n    context.fillStyle = 'red';\n    context.fillText(`${topPrediction.className} (${Math.round(topPrediction.probability * 100)}%)`, 10, 30);\n    // Display the annotated image.\n    document.body.appendChild(canvas);\n  });\n  return predictions;",
+        "type": "code",
+        "location": "/src/controller/ImageAnalyser.js:1-28"
+    },
+    "43": {
+        "file_id": 7,
+        "content": "This code imports TensorFlow and MobileNet models, analyzes an image to classify its content using MobileNet, then logs the classification results and optionally draws the top prediction on the image.",
+        "type": "comment"
+    },
+    "44": {
+        "file_id": 7,
+        "content": "};\nexport const runObjectDetection = async (capturedImage) => {\n  console.log(\"start object detection ...\");\n  try {\n    const mobileNetModel = await mobilenet.load();\n    const predictions = await analyzeImage(capturedImage, mobileNetModel);\n    console.log(predictions);\n    return predictions;\n  } catch (error) {\n    return 'Error running object detection: ' + error;\n  }\n};",
+        "type": "code",
+        "location": "/src/controller/ImageAnalyser.js:29-41"
+    },
+    "45": {
+        "file_id": 7,
+        "content": "Function for running object detection on a captured image. Loads MobileNet model and returns predictions. Logs error if any occurs.",
+        "type": "comment"
+    },
+    "46": {
+        "file_id": 8,
+        "content": "/src/controller/gpt.js",
+        "type": "filepath"
+    },
+    "47": {
+        "file_id": 8,
+        "content": "Creating an instance of OpenAIApi using provided API key and creating a completion with the model \"text-davinci-003\", prompt, temperature 1, maximum tokens 3000, and specific stop sequence.",
+        "type": "summary"
+    },
+    "48": {
+        "file_id": 8,
+        "content": "const { Configuration, OpenAIApi } = require(\"openai\");\nexport const askGpt = async (topic) => {\n  try {\n    const configuration = new Configuration({\n        apiKey: \"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\",\n      });\n      const openai = new OpenAIApi(configuration);\n      const response = await openai.createCompletion({\n        model: \"text-davinci-003\",\n        prompt: \"I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. \\n\\nQ: \" + topic + \"\\nA:\",\n        temperature: 1,\n        max_tokens: 3000,\n        top_p: 1,\n        frequency_penalty: 0.0,\n        presence_penalty: 0.0,\n        stop: [\"\\n\"],\n      });\n    console.log(response);\n  } catch (error) {\n    console.error('Error calling GPT:', error);\n  }\n};",
+        "type": "code",
+        "location": "/src/controller/gpt.js:1-26"
+    },
+    "49": {
+        "file_id": 8,
+        "content": "Creating an instance of OpenAIApi using provided API key and creating a completion with the model \"text-davinci-003\", prompt, temperature 1, maximum tokens 3000, and specific stop sequence.",
+        "type": "comment"
+    }
+}

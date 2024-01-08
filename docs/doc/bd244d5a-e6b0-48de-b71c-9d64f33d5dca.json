@@ -1,0 +1,15 @@
+{
+    "summary": "The code defines UI styles for elements like loading spinners, buttons, and containers. It uses flexbox and animations for effects. Button styles include hover and focus effects. Element widths and heights are set to automatic values for content-based adjustments.",
+    "details": [
+        {
+            "comment": "This code defines styles for various elements in the UI, including a loading spinner, buttons, and image/video capture containers. It uses flexbox to align content and applies animations to create a rotating spinner effect. The button styles include hover and focus effects.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/App.css\":0-57",
+            "content": ".loading-spinner {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100px;\n}\n.spinner {\n  border: 4px solid #f3f3f3;\n  border-top: 4px solid #3498db;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  animation: spin 1s linear infinite;\n}\n@keyframes spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.optionsBtn {\n  display: inline-block;\n  width: 35%;\n  background: #000;\n  border-radius: 150px;\n  padding: 10px;\n  margin-right: 10px;\n  color: #fff;\n  border: none;\n  cursor: pointer;\n}\n.optionsBtn:hover {\n  background: #333;\n}\n.optionsBtn:focus {\n  outline: none;\n}\n.capture-img, .capture-video {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n}\n#capture-img, #capture-video {\n  max-width: 100%;\n  max-height: 100%;"
+        },
+        {
+            "comment": "Sets the width and height of elements to automatic values, allowing them to adjust according to their content.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/App.css\":58-60",
+            "content": "  width: auto;\n  height: auto;\n}"
+        }
+    ]
+}

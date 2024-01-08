@@ -1,0 +1,10 @@
+{
+    "summary": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
+    "details": [
+        {
+            "comment": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/index.js\":0-13",
+            "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\nimport reportWebVitals from './reportWebVitals';\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\nreportWebVitals();"
+        }
+    ]
+}

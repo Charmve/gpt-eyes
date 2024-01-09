@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="github-markdown.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .directory:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        :target {
+            background-color: yellow !important;
+        }
+
+        .folded::before {
+            content: '\25B6';
+            margin-right: 8px;
+            /* Add space between marker and text */
+        }
+
+        .expanded::before {
+            content: '\25BC';
+            margin-right: 8px;
+            /* Add space between marker and text */
+        }
+    </style>
+    <script>
+        function toggleVisibility(element) {
+            let mclass = element.getAttribute("class");
+            if (mclass == "expanded") {
+                element.setAttribute('class', 'folded');
+            } else {
+                element.setAttribute('class', 'expanded');
+            }
+            const siblings = element.parentNode.children;
+            for (const sibling of siblings) {
+                if (sibling !== element) {
+                    sibling.style.display = (sibling.style.display === 'none') ? 'block' : 'none';
+                }
+            }
+        }
+    </script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+
+            .partial-repository-url {
+                display: none;
+            }
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="markdown-body">
+        <h2>Project Structure<span hierarchy="0" class="partial-repository-url"> of: Charmve/gpt-eyes</span><div style="float: right;"><a href="index.html"><i class="bi bi-search"></i></a></div></h2>
+<ul>
+<li><span hierarchy="0" class="expanded" onclick="toggleVisibility(this)" ><strong class="directory" id="/"><code>gpt-eyes</code></strong> <em>App built with React, Vision AI for object recognition and Q/A.</em></span><ul>
+<li><a href="index.html?q=/README.md" id="/README.md"><code>README.md</code></a> <em>Vision AI app identifies objects, searches web, answers questions.</em></li>
+<li><a href="index.html?q=/package.json" id="/package.json"><code>package.json</code></a> <em>React app package.json with dependencies, scripts, and config.</em></li>
+<li><span hierarchy="1" class="expanded" onclick="toggleVisibility(this)" ><strong class="directory" id="/src/"><code>src</code></strong> <em>Application logic, UI styles, events, imports, web vitals.</em></span><ul>
+<li><a href="index.html?q=/src/App.css" id="/src/App.css"><code>App.css</code></a> <em>UI styles for elements, flexbox, animations, button effects.</em></li>
+<li><a href="index.html?q=/src/App.js" id="/src/App.js"><code>App.js</code></a> <em>App.js: Imports, handles events, renders image/video, captures or predicts, analyses, interacts with GPT.</em></li>
+<li><span hierarchy="2" class="expanded" onclick="toggleVisibility(this)" ><strong class="directory" id="/src/controller/"><code>controller</code></strong> <em>Controller module for application logic</em></span><ul>
+<li><a href="index.html?q=/src/controller/ImageAnalyser.js" id="/src/controller/ImageAnalyser.js"><code>ImageAnalyser.js</code></a> <em>Image classifier and object detector using TensorFlow and MobileNet.</em></li>
+<li><a href="index.html?q=/src/controller/gpt.js" id="/src/controller/gpt.js"><code>gpt.js</code></a> <em>Create OpenAIApi instance, completion with model "text-davinci-003" and stop sequence.</em></li>
+</ul>
+</li>
+<li><a href="index.html?q=/src/index.css" id="/src/index.css"><code>index.css</code></a> <em>CSS styles for body and code elements, defining fonts, margins, text smoothing.</em></li>
+<li><a href="index.html?q=/src/index.js" id="/src/index.js"><code>index.js</code></a> <em>Index.js - React, libraries, styles, 'App' in strict mode, web vitals.</em></li>
+<li><a href="index.html?q=/src/reportWebVitals.js" id="/src/reportWebVitals.js"><code>reportWebVitals.js</code></a> <em>Report web vitals metrics using dynamic import.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+    </article>
+    <script type="text/javascript">
+        function getQueryParams() {
+            var search = window.location.search.substring(1); // Remove leading '?'
+            var queryParams = {};
+            search.split('&').forEach(function (pair) {
+                var parts = pair.split('=');
+                var key = decodeURIComponent(parts[0]);
+                var value = decodeURIComponent(parts[1]);
+                queryParams[key] = value;
+            });
+            return queryParams;
+        }
+
+        const queryParams = getQueryParams(window.location.search);
+        const show_full = queryParams.full == "true";
+        if (!show_full) {
+            const spans = document.querySelectorAll('span');
+            for (let span of spans) {
+                if (span.getAttribute("hierarchy") == '0') { continue }
+
+                toggleVisibility(span);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -28,7 +28,7 @@
     },
     "5": {
         "file_id": 0,
-        "content": "\"This code describes a project that utilizes React for the frontend, TensorFlow Models - MobileNet for image analysis API, and GPT API for text generation. It provides instructions on how to install dependencies, configure API keys, start the development server, and use the application.\"",
+        "content": "This code describes a project that utilizes React for the frontend, TensorFlow Models - MobileNet for image analysis API, and GPT API for text generation. It provides instructions on how to install dependencies, configure API keys, start the development server, and use the application.",
         "type": "comment"
     },
     "6": {

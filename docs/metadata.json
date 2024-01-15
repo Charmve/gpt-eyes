@@ -7,7 +7,7 @@
         "0": {
             "filepath": "/README.md",
             "entry_id": 0,
-            "language_id": "plain-text"
+            "language_id": "markdown"
         },
         "1": {
             "filepath": "/package.json",
@@ -25,27 +25,27 @@
             "language_id": "javascript"
         },
         "4": {
-            "filepath": "/src/index.css",
+            "filepath": "/src/controller/ImageAnalyser.js",
             "entry_id": 28,
-            "language_id": "css"
+            "language_id": "javascript"
         },
         "5": {
-            "filepath": "/src/index.js",
-            "entry_id": 32,
+            "filepath": "/src/controller/gpt.js",
+            "entry_id": 34,
             "language_id": "javascript"
         },
         "6": {
-            "filepath": "/src/reportWebVitals.js",
-            "entry_id": 36,
-            "language_id": "javascript"
+            "filepath": "/src/index.css",
+            "entry_id": 38,
+            "language_id": "css"
         },
         "7": {
-            "filepath": "/src/controller/ImageAnalyser.js",
-            "entry_id": 40,
+            "filepath": "/src/index.js",
+            "entry_id": 42,
             "language_id": "javascript"
         },
         "8": {
-            "filepath": "/src/controller/gpt.js",
+            "filepath": "/src/reportWebVitals.js",
             "entry_id": 46,
             "language_id": "javascript"
         }

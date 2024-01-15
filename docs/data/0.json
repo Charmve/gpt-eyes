@@ -151,118 +151,118 @@
     },
     "28": {
         "file_id": 4,
-        "content": "/src/index.css",
+        "content": "/src/controller/ImageAnalyser.js",
         "type": "filepath"
     },
     "29": {
         "file_id": 4,
-        "content": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
+        "content": "This code utilizes TensorFlow and MobileNet to classify image content by analyzing it, logs classification results, and optionally draws the top prediction. A function is also provided for object detection on captured images using MobileNet model and logging predictions.",
         "type": "summary"
     },
     "30": {
         "file_id": 4,
-        "content": "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}",
-        "type": "code",
-        "location": "/src/index.css:1-13"
-    },
-    "31": {
-        "file_id": 4,
-        "content": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
-        "type": "comment"
-    },
-    "32": {
-        "file_id": 5,
-        "content": "/src/index.js",
-        "type": "filepath"
-    },
-    "33": {
-        "file_id": 5,
-        "content": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
-        "type": "summary"
-    },
-    "34": {
-        "file_id": 5,
-        "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\nimport reportWebVitals from './reportWebVitals';\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\nreportWebVitals();",
-        "type": "code",
-        "location": "/src/index.js:1-14"
-    },
-    "35": {
-        "file_id": 5,
-        "content": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
-        "type": "comment"
-    },
-    "36": {
-        "file_id": 6,
-        "content": "/src/reportWebVitals.js",
-        "type": "filepath"
-    },
-    "37": {
-        "file_id": 6,
-        "content": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
-        "type": "summary"
-    },
-    "38": {
-        "file_id": 6,
-        "content": "const reportWebVitals = onPerfEntry => {\n  if (onPerfEntry && onPerfEntry instanceof Function) {\n    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n      getCLS(onPerfEntry);\n      getFID(onPerfEntry);\n      getFCP(onPerfEntry);\n      getLCP(onPerfEntry);\n      getTTFB(onPerfEntry);\n    });\n  }\n};\nexport default reportWebVitals;",
-        "type": "code",
-        "location": "/src/reportWebVitals.js:1-13"
-    },
-    "39": {
-        "file_id": 6,
-        "content": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
-        "type": "comment"
-    },
-    "40": {
-        "file_id": 7,
-        "content": "/src/controller/ImageAnalyser.js",
-        "type": "filepath"
-    },
-    "41": {
-        "file_id": 7,
-        "content": "This code utilizes TensorFlow and MobileNet to classify image content by analyzing it, logs classification results, and optionally draws the top prediction. A function is also provided for object detection on captured images using MobileNet model and logging predictions.",
-        "type": "summary"
-    },
-    "42": {
-        "file_id": 7,
         "content": "import * as tf from '@tensorflow/tfjs';\nimport * as mobilenet from '@tensorflow-models/mobilenet';\nconst analyzeImage = async (image, model) => {\n  const img = new Image();\n  img.src = image;\n  await img.decode(); // Ensure the image is fully loaded\n  console.log(\"start classify...\");\n  const predictions = await model.classify(img);\n  predictions.forEach(prediction => {\n    console.log(`Class: ${prediction.className}, Probability: ${prediction.probability}`);\n    // Optionally, you can also draw the top prediction on the image.\n    const topPrediction = prediction;\n    const canvas = document.createElement('canvas');\n    const context = canvas.getContext('2d');\n    canvas.width = img.width;\n    canvas.height = img.height;\n    context.drawImage(img, 0, 0);\n    context.font = '18px Arial';\n    context.fillStyle = 'red';\n    context.fillText(`${topPrediction.className} (${Math.round(topPrediction.probability * 100)}%)`, 10, 30);\n    // Display the annotated image.\n    document.body.appendChild(canvas);\n  });\n  return predictions;",
         "type": "code",
         "location": "/src/controller/ImageAnalyser.js:1-28"
     },
-    "43": {
-        "file_id": 7,
+    "31": {
+        "file_id": 4,
         "content": "This code imports TensorFlow and MobileNet models, analyzes an image to classify its content using MobileNet, then logs the classification results and optionally draws the top prediction on the image.",
         "type": "comment"
     },
-    "44": {
-        "file_id": 7,
+    "32": {
+        "file_id": 4,
         "content": "};\nexport const runObjectDetection = async (capturedImage) => {\n  console.log(\"start object detection ...\");\n  try {\n    const mobileNetModel = await mobilenet.load();\n    const predictions = await analyzeImage(capturedImage, mobileNetModel);\n    console.log(predictions);\n    return predictions;\n  } catch (error) {\n    return 'Error running object detection: ' + error;\n  }\n};",
         "type": "code",
         "location": "/src/controller/ImageAnalyser.js:29-41"
     },
-    "45": {
-        "file_id": 7,
+    "33": {
+        "file_id": 4,
         "content": "Function for running object detection on a captured image. Loads MobileNet model and returns predictions. Logs error if any occurs.",
         "type": "comment"
     },
-    "46": {
-        "file_id": 8,
+    "34": {
+        "file_id": 5,
         "content": "/src/controller/gpt.js",
         "type": "filepath"
     },
-    "47": {
-        "file_id": 8,
+    "35": {
+        "file_id": 5,
         "content": "Creating an instance of OpenAIApi using provided API key and creating a completion with the model \"text-davinci-003\", prompt, temperature 1, maximum tokens 3000, and specific stop sequence.",
         "type": "summary"
     },
-    "48": {
-        "file_id": 8,
+    "36": {
+        "file_id": 5,
         "content": "const { Configuration, OpenAIApi } = require(\"openai\");\nexport const askGpt = async (topic) => {\n  try {\n    const configuration = new Configuration({\n        apiKey: \"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\",\n      });\n      const openai = new OpenAIApi(configuration);\n      const response = await openai.createCompletion({\n        model: \"text-davinci-003\",\n        prompt: \"I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. \\n\\nQ: \" + topic + \"\\nA:\",\n        temperature: 1,\n        max_tokens: 3000,\n        top_p: 1,\n        frequency_penalty: 0.0,\n        presence_penalty: 0.0,\n        stop: [\"\\n\"],\n      });\n    console.log(response);\n  } catch (error) {\n    console.error('Error calling GPT:', error);\n  }\n};",
         "type": "code",
         "location": "/src/controller/gpt.js:1-26"
     },
+    "37": {
+        "file_id": 5,
+        "content": "Creating an instance of OpenAIApi using provided API key and creating a completion with the model \"text-davinci-003\", prompt, temperature 1, maximum tokens 3000, and specific stop sequence.",
+        "type": "comment"
+    },
+    "38": {
+        "file_id": 6,
+        "content": "/src/index.css",
+        "type": "filepath"
+    },
+    "39": {
+        "file_id": 6,
+        "content": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
+        "type": "summary"
+    },
+    "40": {
+        "file_id": 6,
+        "content": "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}",
+        "type": "code",
+        "location": "/src/index.css:1-13"
+    },
+    "41": {
+        "file_id": 6,
+        "content": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
+        "type": "comment"
+    },
+    "42": {
+        "file_id": 7,
+        "content": "/src/index.js",
+        "type": "filepath"
+    },
+    "43": {
+        "file_id": 7,
+        "content": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
+        "type": "summary"
+    },
+    "44": {
+        "file_id": 7,
+        "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\nimport reportWebVitals from './reportWebVitals';\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\nreportWebVitals();",
+        "type": "code",
+        "location": "/src/index.js:1-14"
+    },
+    "45": {
+        "file_id": 7,
+        "content": "Importing React and necessary libraries, styling, and rendering the 'App' component within a strict mode in the root element with ID 'root'. Reporting web vitals.",
+        "type": "comment"
+    },
+    "46": {
+        "file_id": 8,
+        "content": "/src/reportWebVitals.js",
+        "type": "filepath"
+    },
+    "47": {
+        "file_id": 8,
+        "content": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
+        "type": "summary"
+    },
+    "48": {
+        "file_id": 8,
+        "content": "const reportWebVitals = onPerfEntry => {\n  if (onPerfEntry && onPerfEntry instanceof Function) {\n    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {\n      getCLS(onPerfEntry);\n      getFID(onPerfEntry);\n      getFCP(onPerfEntry);\n      getLCP(onPerfEntry);\n      getTTFB(onPerfEntry);\n    });\n  }\n};\nexport default reportWebVitals;",
+        "type": "code",
+        "location": "/src/reportWebVitals.js:1-13"
+    },
     "49": {
         "file_id": 8,
-        "content": "Creating an instance of OpenAIApi using provided API key and creating a completion with the model \"text-davinci-003\", prompt, temperature 1, maximum tokens 3000, and specific stop sequence.",
+        "content": "This code exports a function called \"reportWebVitals\" that takes a callback as an argument and reports web vital metrics like CLS, FID, FCP, LCP, and TTFB. It uses dynamic import to load the \"web-vitals\" module and calls the respective metric functions with the provided callback.",
         "type": "comment"
     }
 }

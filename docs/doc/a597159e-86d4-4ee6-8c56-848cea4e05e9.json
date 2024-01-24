@@ -1,0 +1,15 @@
+{
+    "summary": "This code utilizes TensorFlow and MobileNet to classify image content by analyzing it, logs classification results, and optionally draws the top prediction. A function is also provided for object detection on captured images using MobileNet model and logging predictions.",
+    "details": [
+        {
+            "comment": "This code imports TensorFlow and MobileNet models, analyzes an image to classify its content using MobileNet, then logs the classification results and optionally draws the top prediction on the image.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/controller/ImageAnalyser.js\":0-27",
+            "content": "import * as tf from '@tensorflow/tfjs';\nimport * as mobilenet from '@tensorflow-models/mobilenet';\nconst analyzeImage = async (image, model) => {\n  const img = new Image();\n  img.src = image;\n  await img.decode(); // Ensure the image is fully loaded\n  console.log(\"start classify...\");\n  const predictions = await model.classify(img);\n  predictions.forEach(prediction => {\n    console.log(`Class: ${prediction.className}, Probability: ${prediction.probability}`);\n    // Optionally, you can also draw the top prediction on the image.\n    const topPrediction = prediction;\n    const canvas = document.createElement('canvas');\n    const context = canvas.getContext('2d');\n    canvas.width = img.width;\n    canvas.height = img.height;\n    context.drawImage(img, 0, 0);\n    context.font = '18px Arial';\n    context.fillStyle = 'red';\n    context.fillText(`${topPrediction.className} (${Math.round(topPrediction.probability * 100)}%)`, 10, 30);\n    // Display the annotated image.\n    document.body.appendChild(canvas);\n  });\n  return predictions;"
+        },
+        {
+            "comment": "Function for running object detection on a captured image. Loads MobileNet model and returns predictions. Logs error if any occurs.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/controller/ImageAnalyser.js\":28-40",
+            "content": "};\nexport const runObjectDetection = async (capturedImage) => {\n  console.log(\"start object detection ...\");\n  try {\n    const mobileNetModel = await mobilenet.load();\n    const predictions = await analyzeImage(capturedImage, mobileNetModel);\n    console.log(predictions);\n    return predictions;\n  } catch (error) {\n    return 'Error running object detection: ' + error;\n  }\n};"
+        }
+    ]
+}

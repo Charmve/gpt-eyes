@@ -1,0 +1,22 @@
+{
+    "/README.md": "GPT Eyes: AI-Powered Visual Q&A Tool",
+    "/README.md:1-26": "GPT Eyes: AI-Powered Object Recognition and Information Search",
+    "/README.md:28-58": "Multimodal AI App with React, TensorFlow, and GPT",
+    "/package.json": "React App Package.json Config",
+    "/src/App.css": "Animated Flexbox UI Styles",
+    "/src/App.css:1-58": "UI Styles with Flexbox and Spinner Animation",
+    "/src/App.css:59-61": "Automatic Sizing for Elements",
+    "/src/App.js": "Video Analysis and Interaction Tool",
+    "/src/App.js:1-32": "Fullscreen Video Resizer",
+    "/src/App.js:101-115": "Image or Video Rendering Logic",
+    "/src/App.js:115-142": "Analyze Button and Results Display",
+    "/src/App.js:33-67": "Video Streaming and Object Detection",
+    "/src/App.js:68-100": "Video Capture and Prediction Logic",
+    "/src/controller/ImageAnalyser.js": "Image Analyzer with TensorFlow & MobileNet",
+    "/src/controller/ImageAnalyser.js:1-28": "Image Classification with TensorFlow and MobileNet",
+    "/src/controller/ImageAnalyser.js:29-41": "Object Detection on Captured Image",
+    "/src/controller/gpt.js": "Creating OpenAIApi Instance and Completion",
+    "/src/index.css": "Webpage Styles: Body and Code Elements",
+    "/src/index.js": "Setting Up React App and Reporting Web Vitals",
+    "/src/reportWebVitals.js": "Web Vitals Metrics Reporting Function"
+}

@@ -1,0 +1,10 @@
+{
+    "summary": "This code is a package.json file for a React application, defining the project's dependencies and configuration. It uses popular libraries like TensorFlow, OpenAI, Axios, and Jest for testing. The app targets modern browsers and has scripts for start, build, test, and eject operations.",
+    "details": [
+        {
+            "comment": "This code is a package.json file for a React application, defining the project's dependencies and configuration. It uses popular libraries like TensorFlow, OpenAI, Axios, and Jest for testing. The app targets modern browsers and has scripts for start, build, test, and eject operations.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/package.json\":0-42",
+            "content": "{\n  \"name\": \"eyes-gpt\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n    \"@tensorflow-models/coco-ssd\": \"^2.2.2\",\n    \"@tensorflow-models/mobilenet\": \"^2.1.0\",\n    \"@tensorflow/tfjs\": \"^4.5.0\",\n    \"@testing-library/jest-dom\": \"^5.16.5\",\n    \"@testing-library/react\": \"^13.4.0\",\n    \"@testing-library/user-event\": \"^13.5.0\",\n    \"axios\": \"^1.4.0\",\n    \"openai\": \"^3.2.1\",\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-scripts\": \"5.0.1\",\n    \"web-vitals\": \"^2.1.4\"\n  },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\",\n      \"react-app/jest\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}"
+        }
+    ]
+}

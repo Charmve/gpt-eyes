@@ -1,0 +1,10 @@
+{
+    "summary": "Creating an instance of OpenAIApi using provided API key and creating a completion with the model \"text-davinci-003\", prompt, temperature 1, maximum tokens 3000, and specific stop sequence.",
+    "details": [
+        {
+            "comment": "Creating an instance of OpenAIApi using provided API key and creating a completion with the model \"text-davinci-003\", prompt, temperature 1, maximum tokens 3000, and specific stop sequence.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/controller/gpt.js\":0-25",
+            "content": "const { Configuration, OpenAIApi } = require(\"openai\");\nexport const askGpt = async (topic) => {\n  try {\n    const configuration = new Configuration({\n        apiKey: \"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\",\n      });\n      const openai = new OpenAIApi(configuration);\n      const response = await openai.createCompletion({\n        model: \"text-davinci-003\",\n        prompt: \"I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. \\n\\nQ: \" + topic + \"\\nA:\",\n        temperature: 1,\n        max_tokens: 3000,\n        top_p: 1,\n        frequency_penalty: 0.0,\n        presence_penalty: 0.0,\n        stop: [\"\\n\"],\n      });\n    console.log(response);\n  } catch (error) {\n    console.error('Error calling GPT:', error);\n  }\n};"
+        }
+    ]
+}

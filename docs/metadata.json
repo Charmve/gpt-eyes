@@ -1,0 +1,55 @@
+{
+    "url": {
+        "full": "https://github.com/Charmve/gpt-eyes",
+        "partial": "Charmve/gpt-eyes"
+    },
+    "file_mapping": {
+        "0": {
+            "filepath": "/README.md",
+            "entry_id": 0,
+            "language_id": "markdown"
+        },
+        "1": {
+            "filepath": "/package.json",
+            "entry_id": 6,
+            "language_id": "json"
+        },
+        "2": {
+            "filepath": "/src/App.css",
+            "entry_id": 10,
+            "language_id": "css"
+        },
+        "3": {
+            "filepath": "/src/App.js",
+            "entry_id": 16,
+            "language_id": "javascript"
+        },
+        "4": {
+            "filepath": "/src/controller/ImageAnalyser.js",
+            "entry_id": 28,
+            "language_id": "javascript"
+        },
+        "5": {
+            "filepath": "/src/controller/gpt.js",
+            "entry_id": 34,
+            "language_id": "javascript"
+        },
+        "6": {
+            "filepath": "/src/index.css",
+            "entry_id": 38,
+            "language_id": "css"
+        },
+        "7": {
+            "filepath": "/src/index.js",
+            "entry_id": 42,
+            "language_id": "javascript"
+        },
+        "8": {
+            "filepath": "/src/reportWebVitals.js",
+            "entry_id": 46,
+            "language_id": "javascript"
+        }
+    },
+    "project_name": "gpt-eyes",
+    "split_count": 1
+}

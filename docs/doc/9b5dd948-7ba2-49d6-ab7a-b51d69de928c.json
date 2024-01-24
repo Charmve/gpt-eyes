@@ -1,0 +1,10 @@
+{
+    "summary": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
+    "details": [
+        {
+            "comment": "This code defines the styles for the body and code elements in a webpage, specifying fonts, margins, and text smoothing.",
+            "location": "\"/media/root/Toshiba XG3/works/gpt-eyes/docs/src/src/index.css\":0-12",
+            "content": "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}"
+        }
+    ]
+}
